@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ChatUsr">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" >
+
+        <ImageView
+            android:id="@+id/ico"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/disp_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="26dp"
+            android:layout_toEndOf="@+id/icon"
+            android:layout_toRightOf="@+id/icon"
+            android:text="Username"
+            android:textSize="30dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/lst"
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:layout_above="@+id/fbtn_snd"
+        android:layout_marginBottom="16dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="16dp"
+        android:src="@drawable/ic_action_mess"
+        android:layout_below="@+id/toolbar"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbtn_snd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
+
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ic_action_send" />
+
+    <EditText
+        android:id="@+id/type_msg"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="2dp"
+
+        android:layout_marginBottom="22dp"
+        android:hint="Type Message Here..."
+        app:layout_constraintEnd_toStartOf="@+id/fbtn_snd" />
+
+
+
+
+</RelativeLayout>
